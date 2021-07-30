@@ -1,0 +1,17 @@
+{
+  "name": "1_programming",
+  "version": "1.0.0",
+  "description": "This is the package for the challenge",
+  "main": "dataManipulation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "XalDigital"
+  ],
+  "author": "Moisés Vivar Montoya",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
