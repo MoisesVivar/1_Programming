@@ -11,7 +11,7 @@
   ],
   "author": "Moisés Vivar Montoya",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "request": "^2.88.0"
   }
 }
