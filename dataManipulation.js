@@ -39,4 +39,18 @@ request({url, json: true,gzip: true},(error,response) =>{
     console.log("5. Obtener la respuesta más vieja y más actual")
     console.log("Titulo de la pregunta mas vieja: " + response.body.items[0].title, "Fecha: " + new Date(response.body.items[0].creation_date*1000))
     console.log("Titulo de la pregunta mas actual: " + response.body.items[response.body.items.length-1].title, "Fecha: " + new Date(response.body.items[response.body.items.length-1].creation_date*1000))
+
+    console.log("6. Obtener la respuesta del owner que tenga una mayor reputación")
+
+    response.body.items.sort(function(a,b){
+        if(a.owner.reputation > b.owner.reputation){
+            return -1
+        }
+        if(a.owner.reputation < b.owner.reputation){
+            return 1
+        }
+        return 0        
+    })
+    console.log("Titulo de la pregunta con Owner con mayor reputacion: " + response.body.items[0].title, "Reputation: " + response.body.items[0].owner.reputation)
+
 })
